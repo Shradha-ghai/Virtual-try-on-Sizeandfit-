@@ -8,6 +8,8 @@ Our project consists of four major parts:
 <br />Deep Learning based Human Pose Estimation using OpenCV is now implemented on the photo uploaded by the user. This project uses a pre-trained Caffe model where two datasets have been trained named MPII and COCO which outputs:
 <br />-> Confidence and Affinity maps for the keypoint-Left Shoulder.
 <br />-> Affinity maps for Neck-Left shoulder pair
+<br />After training the dataset the final results were predicted accordingly.
+
 
 <br />3-Human Parsing(Working on improving the model)
 <br />Initially  all the necessary packages needed for the project were imported which were run and verified.
