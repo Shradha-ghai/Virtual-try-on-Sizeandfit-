@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+           Image Uploader
+        </title>
+    </head>
+    <style>
+
+        body{
+            background-image: url("2.jpg");
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        
+
+        #img{
+            width:20vw;
+            height:40vh;
+            
+            position:absolute;
+            top:14vh;
+            left:30vw;
+            margin-left:7vw;
+            margin-top:7vh;
+            display:none;
+        }
+
+        #button{
+            color:transparent;
+        }
+
+        #button::-webkit-file-upload-button{
+            visibility:hidden;
+        }
+           
+
+        #button::before{
+            content:'Upload your image!';
+            color:rgb(0, 5, 10);
+            display:inline-block;
+            background:lightcoral;
+            border:1px solid #999;
+            border-radius:3px;
+            padding:5px 8px;
+            cursor:pointer;
+            font-weight:700;
+            font-size: 10pt;
+        }
+
+        #button:hover::before{
+            border-color:black;
+            background-color: rgb(243,149,149);
+        }
+
+        #button:focus{
+            outline:none;
+        }
+
+        }
+
+    </style>
+    <body>
+
+
+        <input type='file' id='button'>
+        <div>
+            
+            <img src='' id='img'>
+            
+        </div>
+
+        <script type='text/javascript'>
+         let img=document.getElementById('img')
+         let button=document.getElementById('button')
+         button.addEventListener('change',function(){
+             if(this.files[0].type!='image/jpeg'&&this.files[0].type!='image/png'&&this.files[0].type!='image/gif'&&this.files[0].type!='image/jpg'){
+                 alert('sorry you have to upload an image')
+             }
+             else{
+                 img.style.display='block'
+                 img.src=URL.createObjectURL(this.files[0])
+             }
+         })
+        </script>
+
+
+    </body>
+</html>
