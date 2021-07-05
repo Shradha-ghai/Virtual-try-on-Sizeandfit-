@@ -1,4 +1,4 @@
-# Virtual-try-on-Sizeandfit-
+# Virtual-try-on-Sizeandfit(In Progress)
 Our project consists of four major parts:
 
 <br />1-Uploading image on webpage.(completed)
